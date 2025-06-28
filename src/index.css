@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+  }
+  ul,
+  li,
+  ol {
+    list-style: none;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  div,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  div,
+  img,
+  ul,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+:root {
+  --blue_color: #3264ff;
+  --TextPrimary_color: #051a37;
+  --gray_text_color:#b3b3b3;
+ --white_color: #ffffff;
+
+  --Poppins: "Poppins", sans-serif;
+  --Montserrat: "Montserrat", sans-serif;
+  --Roboto: "Roboto Condensed", sans-serif;
+}
