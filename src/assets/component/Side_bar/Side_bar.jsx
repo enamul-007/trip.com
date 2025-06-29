@@ -44,7 +44,7 @@ const Side_bar = () => {
         <button
           className="absolute z-50 top-[-49px] left-[17px] p-1 rounded hover:bg-gray-200"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle Sidebar"
+          // aria-label="Toggle Sidebar"
         >
           <BsList className="text-[22px] text-gray-600" />
         </button>
@@ -55,19 +55,19 @@ const Side_bar = () => {
             item.divider ? (
               <div
                 key={index}
-                className="w-full h-[1px] my-2 bg-gray-100"
+                className=" h-[1px] bg-gray-100"
               ></div>
             ) : (
               <button
                 key={index}
-                className="flex items-center p-2 transition-colors rounded hover:bg-blue-100"
+                className="flex items-center transition-colors rounded p-[7px] hover:bg-blue-100"
               >
                 <div className="pl-1 text-xl text-gray-500 ">{item.icon}</div>
                 <span
                   className={`ml-6 whitespace-nowrap transition-all duration-300 ${
                     isOpen
-                      ? "opacity-100 visible font-Montserrat font-semibold text-[13px]"
-                      : "opacity-0 invisible w-0"
+                      ? "opacity-100 visible font-Montserrat font-semibold text-[13px] mt-[4.5px]"
+                      : "opacity-0 invisible w-0 "
                   }`}
                 >
                   {item.label}
