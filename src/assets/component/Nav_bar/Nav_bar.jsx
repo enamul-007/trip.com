@@ -38,11 +38,16 @@ const Nav_bar = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-2 pr-14">
+          <div className="flex items-center gap-[8px] pr-11">
             <button className="flex items-center px-[6px] py-[6px] rounded-sm hover:bg-gray-300 transition-all">
-              <ImMobile2 className="mr-1 text-gray-500" />
+              <ImMobile2 className="mr-1 text-gray-500 text-[18px]" />
               <h2 className=" pr-[6px] text-[13px] font-bold font-Montserrat text-TextPrimary_color ">
                 App
+              </h2>
+            </button>
+            <button className="flex items-center px-[6px] py-[6px] rounded-sm hover:bg-gray-300 transition-all">
+              <h2 className=" pr-[6px] text-[13px] font-bold font-Montserrat text-TextPrimary_color ">
+                List Your Property
               </h2>
             </button>
             <button className="flex items-center px-[6px] py-[6px] rounded-sm hover:bg-gray-300 transition-all">
@@ -60,7 +65,7 @@ const Nav_bar = () => {
             <button className="text-[13px] font-bold transition-all rounded-sm font-Montserrat text-TextPrimary_color hover:bg-gray-300 px-[6px] py-[6px]">
               Find Bookings
             </button>
-            <button className="text-[13px] font-bold transition-all rounded-sm font-Montserrat  bg-blue_color px-[6px] py-[6px] text-white_color">
+            <button className="text-[13px] font-bold transition-all rounded font-Montserrat  bg-blue_color px-[9px] py-[7px] text-white_color ">
               sign in /Register
             </button>
           </div>
