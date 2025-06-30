@@ -50,9 +50,9 @@ const Side_bar = () => {
   const getBannerHeight = () => {
     switch (activeTab) {
       case "Flights":
-        return "h-[430px]";
+        return "h-[460px]";
       case "Hotels & Homes":
-        return "h-[350px]";
+        return "h-[380px]";
       case "Flight + Hotel":
         return "h-[350px]";
       case "Trains":
@@ -105,7 +105,7 @@ const Side_bar = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-hidden">
         {/* Banner Section */}
         <div className="relative w-full">
           <div
@@ -124,7 +124,7 @@ const Side_bar = () => {
         {/* Search Container */}
         <div>
           {/* Content */}
-          <div className="absolute top-[100px] ml-[400px] flex flex-col items-center justify-center text-white">
+          <div className={`absolute top-[100px]  flex flex-col items-center justify-center text-white    duration-700  transition-all  ${isOpen ? "pl-[400px] scroll-smooth" : "pl-[460px]"}`}>
             <h1 className="mb-3 text-4xl font-bold text-center ">
               Your Trip Starts Here
             </h1>
@@ -177,14 +177,14 @@ const Side_bar = () => {
           </div>
 
           <div
-            className={`absolute  transform    transition-all duration-500 ease-in-out w-full max-w-[1152px] px-4 z-30 left-[330px] ${
+            className={`absolute  transform    transition-all duration-500 ease-in-out w-full max-w-[1152px] px-4 z-30  ${
               activeTab ? "top-[250px]" : "top-[100px]"
-            }`}
+            } ${isOpen ? "left-[19%]" : "left-[15%]" }`}
           >
             <div className="max-w-[1152px] mx-auto">
               <div className="p-3 bg-white shadow-xl rounded-2xl pt-[60px]">
                 {/* Tab Navigation */}
-                <div className="absolute flex p-1 mb-6 bg-gray-800 rounded-full ml-[220px] -top-[20px]  ">
+                <div className="absolute flex p-1 mb-6 bg-gray-800 rounded-full ml-[160px] -top-[20px]  ">
                   {tabItems.map((tab, index) => (
                     <button
                       key={index}
@@ -268,22 +268,28 @@ const Side_bar = () => {
 
                 {activeTab === "Hotels & Homes" && (
                   <div className="pt-4">
-                    <div className="grid grid-cols-1 gap-4 mb-6 md:grid-cols-4 ">
-                      <input
+                    <div className="flex mb-6 ">
+                    <div className="w-[350px]">
+                        <input
                         type="text"
-                        placeholder="Destination / Property name"
+                        placeholder="City, airport, region, landmark or hotel name"
                         className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
-                      <input
+                    </div>
+                      <div className="w-[207px]">
+                        <input
                         type="date"
                         placeholder="Check-in date"
                         className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
-                      <input
+                      </div>
+                     <div className="w-[270px]">
+                       <input
                         type="date"
                         placeholder="Check-out date"
                         className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
+                     </div>
                       <button className="flex items-center gap-2 px-8 py-3 font-semibold text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-0">
                         Search
                       </button>
