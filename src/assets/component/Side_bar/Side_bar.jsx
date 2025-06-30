@@ -17,7 +17,7 @@ import award_img from "../../Images/award_img.png";
 
 const Side_bar = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const [activeTab, setActiveTab] = useState("Flights" ," Flight + Hotel" );
+  const [activeTab, setActiveTab] = useState("Flights");
 
   const menuItems = [
     { icon: <BiSolidPlaneAlt />, label: "Flights" },
@@ -47,21 +47,20 @@ const Side_bar = () => {
   ];
 
   // Dynamic height based on active tab
-const getBannerHeight = () => {
-  switch (activeTab) {
-    case "Flights":
-      return "h-[400px]";
-    case "Hotels & Homes":
-      return "h-[380px]";
-    case "Flight + Hotel":
-      return "h-[400px]";
-    case "Trains":
-      return "h-[390px]";
-    default:
-      return "h-[400px]";
-  }
-};
-
+  const getBannerHeight = () => {
+    switch (activeTab) {
+      case "Flights":
+        return "h-[430px]";
+      case "Hotels & Homes":
+        return "h-[350px]";
+      case "Flight + Hotel":
+        return "h-[350px]";
+      case "Trains":
+        return "h-[390px]";
+      default:
+        return "h-[380px]";
+    }
+  };
 
   return (
     <div className="relative flex h-screen bg-gray-50">
@@ -110,7 +109,7 @@ const getBannerHeight = () => {
         {/* Banner Section */}
         <div className="relative w-full">
           <div
-            className={`w-[98%] ${getBannerHeight()}   relative overflow-hidden transition-all duration-500 pl-5 pt-10 origin-bottom `}
+            className={`w-[98%] ${getBannerHeight()} relative overflow-hidden transition-all duration-500 pl-5 pt-10 origin-bottom`}
           >
             <picture>
               <img
@@ -177,11 +176,15 @@ const getBannerHeight = () => {
             </div>
           </div>
 
-          <div className="relative z-20  -mt-[150px]">
+          <div
+            className={`absolute  transform    transition-all duration-500 ease-in-out w-full max-w-[1152px] px-4 z-30 left-[330px] ${
+              activeTab ? "top-[250px]" : "top-[100px]"
+            }`}
+          >
             <div className="max-w-[1152px] mx-auto">
               <div className="p-3 bg-white shadow-xl rounded-2xl pt-[60px]">
                 {/* Tab Navigation */}
-                <div className="absolute flex p-1 mb-6 bg-gray-800 rounded-full ml-[220px] -top-[20px]">
+                <div className="absolute flex p-1 mb-6 bg-gray-800 rounded-full ml-[220px] -top-[20px]  ">
                   {tabItems.map((tab, index) => (
                     <button
                       key={index}
