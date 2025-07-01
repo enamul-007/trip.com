@@ -15,7 +15,7 @@ const Nav_bar = () => {
   return (
     <div>
       <div>
-        <div className="py-[16px] pl-16 flex items-center justify-between ">
+        <div className="py-[16px] pl-16 flex items-center justify-between z-50 ">
           <div className="flex items-center">
             <div className=" w-[132px]">
               <picture>
